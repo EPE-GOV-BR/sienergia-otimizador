@@ -1,0 +1,7 @@
+^otimizadorLinear\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^data-raw$
+inst/otimizadorDados.sqlite
+^otimizadorDados\.sqlite$
+SIEnergia_dados.sqlite

@@ -1,0 +1,5 @@
+O pacote Rcplex não está instalado.
+
+Esse pacote depende da biblioteca CPLEX.
+
+Leia mais sobre como instalar em: https://cran.r-project.org/web/packages/Rcplex/index.html

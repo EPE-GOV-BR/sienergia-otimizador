@@ -1,0 +1,5 @@
+O pacote gurobi não está instalado.
+
+Esse pacote depende da biblioteca Gurobi.
+
+Leia mais sobre como instalar em: https://cran.r-project.org/web/packages/prioritizr/vignettes/gurobi_installation_guide.html

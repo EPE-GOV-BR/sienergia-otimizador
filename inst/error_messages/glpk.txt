@@ -1,0 +1,4 @@
+O pacote Rglpk não está instalado.
+
+Para instalar, execute:
+install.packages('Rglpk')

@@ -1,0 +1,10 @@
+O pacote rcbc não está instalado.
+
+Para instalar, execute:
+install.packages('remotes')
+remotes::install_github('dirkschumacher/rcbc')
+
+Esse pacote depende da biblioteca CBC Solver, que deve ser instalada
+no sistema, via linha de comando.
+
+Leia mais sobre como instalar em: https://github.com/dirkschumacher/rcbc
