@@ -191,6 +191,36 @@ otimizar <- function(inputs,
       valor = solucao$obj,
       custo_fixo_usina = inputs$custo_fixo_usina
     )
+  } else if (solver[1] == "highs") {
+    if (!verificar_instalacao("highs")) {
+      stop(pegar_msg_erro("highs"))
+    }
+    
+    vtypes <- ifelse(indicador_de_inteiros, "I", "C")
+    
+    solucao <- highs::highs_solve(
+      L = vetor_c,
+      lower = rep(0, ncol(matriz_restricoes)),
+      upper = limite_superior_vars_decisao,
+      A = matriz_restricoes,
+      lhs = rep(-Inf, nrow(matriz_restricoes)),
+      rhs = vetor_restricoes,
+      types = vtypes,
+      maximum = TRUE
+      # Se precisar passar parâmetros de controle, use apenas os válidos para HiGHS:
+      # control = list(time_limit = 60, ...)  # Exemplo com parâmetro válido
+    )
+    
+    list(
+      inputs = inputs,
+      matriz_distancias_saldos = inputs$matriz_distancias_saldos,
+      indices = indices,
+      vetor_c = vetor_c,
+      solucao = solucao$primal_solution,
+      valor = solucao$objective_value,
+      custo_fixo_usina = inputs$custo_fixo_usina
+    )
+
   } else if (solver[1] == "glpk") {
     if (!verificar_instalacao("Rglpk")) {
       stop(pegar_msg_erro("glpk"))
