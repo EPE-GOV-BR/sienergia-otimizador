@@ -207,8 +207,6 @@ otimizar <- function(inputs,
       rhs = vetor_restricoes,
       types = vtypes,
       maximum = TRUE
-      # Se precisar passar parâmetros de controle, use apenas os válidos para HiGHS:
-      # control = list(time_limit = 60, ...)  # Exemplo com parâmetro válido
     )
     
     list(

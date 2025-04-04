@@ -33,7 +33,8 @@ Suggests:
     sf,
     Rcplex,
     gurobi,
-    rcbc
+    rcbc,
+    highs
 VignetteBuilder: knitr
 Depends: 
     R (>= 2.10)
