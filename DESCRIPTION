@@ -23,7 +23,8 @@ Imports:
     htmlwidgets,
     purrr,
     stringr,
-    tidyselect
+    tidyselect,
+    sf
 Suggests: 
     geobr,
     knitr,
@@ -37,5 +38,5 @@ Suggests:
     highs
 VignetteBuilder: knitr
 Depends: 
-    R (>= 2.10)
+    R (>= 4.0.0)
 LazyData: true
