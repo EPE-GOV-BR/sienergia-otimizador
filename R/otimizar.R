@@ -250,7 +250,7 @@ otimizar <- function(inputs,
       custo_fixo_usina = inputs$custo_fixo_usina
     )
   } else {
-    stop("'solver' deve ser 'cbc', 'gurobi', 'cplex' ou 'glpk'.")
+    stop("'solver' deve ser 'cbc', 'gurobi', 'cplex', 'glpk' ou 'highs'.")
   }
 }
 
